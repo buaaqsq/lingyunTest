@@ -1,0 +1,164 @@
+[2014-05-22 16:34:07,774](INFO)qsq : yum install -y nfs-utils rpcbind
+[2014-05-22 16:34:07,774](ERROR)qsq : 
+[2014-05-22 16:34:07,778](INFO)qsq : mkdir -p /usr/opt/
+[2014-05-22 16:34:07,778](ERROR)qsq : 
+[2014-05-22 16:34:07,780](INFO)qsq : echo '/usr/opt/ *(rw,no_root_squash,sync)' >> /etc/exports
+[2014-05-22 16:34:07,781](ERROR)qsq : 
+[2014-05-22 16:34:07,804](INFO)qsq : service rpcbind start
+[2014-05-22 16:34:07,804](ERROR)qsq : 
+[2014-05-22 16:34:07,842](INFO)qsq : service nfs start
+[2014-05-22 16:34:07,843](ERROR)qsq : 
+[2014-05-22 16:34:57,875](INFO)qsq : yum install -y nfs-utils rpcbind
+[2014-05-22 16:34:57,879](INFO)qsq : mkdir -p /usr/opt/
+[2014-05-22 16:34:57,882](INFO)qsq : echo '/usr/opt/ *(rw,no_root_squash,sync)' >> /etc/exports
+[2014-05-22 16:34:57,903](INFO)qsq : service rpcbind start
+[2014-05-22 16:34:57,934](INFO)qsq : service nfs start
+[2014-05-22 16:56:20,565](INFO)qsq : yum install -y nfs-utils rpcbind
+[2014-05-22 16:57:00,665](INFO)qsq : showmount -e %s
+[2014-05-22 16:57:00,665](ERROR)qsq : clnt_create: RPC: Unknown host
+
+[2014-05-22 16:57:00,668](INFO)qsq : mkdir -p /usr/opt/
+[2014-05-22 16:57:50,861](INFO)qsq : yum install -y nfs-utils rpcbind
+[2014-05-22 16:58:30,914](INFO)qsq : showmount -e %s
+[2014-05-22 16:58:30,914](ERROR)qsq : clnt_create: RPC: Unknown host
+
+[2014-05-22 16:58:30,919](INFO)qsq : mkdir -p /usr/opt/
+[2014-05-22 16:58:31,104](INFO)qsq : mount -t nfs 192.168.2.31:/usr/opt/ /usr/opt/
+[2014-05-22 16:58:31,104](ERROR)qsq : mount.nfs: access denied by server while mounting 192.168.2.31:/usr/opt/
+
+[2014-05-22 17:01:42,263] INFOqsq : yum install -y nfs-utils rpcbind
+[2014-05-22 17:02:22,306] INFOqsq : showmount -e %s
+[2014-05-22 17:02:22,307] ERRORqsq : clnt_create: RPC: Unknown host
+
+[2014-05-22 17:02:22,315] INFOqsq : mkdir -p /usr/opt/
+[2014-05-22 17:02:22,343] INFOqsq : mount -t nfs 192.168.2.31:/usr/opt/ /usr/opt/
+[2014-05-22 17:02:22,344] ERRORqsq : mount.nfs: access denied by server while mounting 192.168.2.31:/usr/opt/
+
+[2014-05-24 02:27:08,661] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:27:08,661] ERROR qsq : mv: cannot move `/root/workspace/lingyun/qsq/install/core-site.xml' to `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:27:08,666] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:27:08,667] ERROR qsq : mv: cannot move `/root/workspace/lingyun/qsq/install/hdfs-site.xml' to `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:27:08,671] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:27:08,671] ERROR qsq : mv: cannot move `/root/workspace/lingyun/qsq/install/yarn-site.xml' to `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:27:08,676] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:27:08,676] ERROR qsq : mv: cannot move `/root/workspace/lingyun/qsq/install/mapred-site.xml' to `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:27:08,681] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:27:08,683] ERROR qsq : mv: cannot move `/root/workspace/lingyun/qsq/install/slaves' to `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:27:08,689] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:27:08,689] ERROR qsq : mv: cannot move `/root/workspace/lingyun/qsq/install/hadoop-env.sh' to `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:30:35,224] INFO qsq : cp /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:30:35,225] ERROR qsq : cp: cannot create regular file `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:30:35,231] INFO qsq : cp /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:30:35,231] ERROR qsq : cp: cannot create regular file `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:30:35,237] INFO qsq : cp /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:30:35,237] ERROR qsq : cp: cannot create regular file `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:30:35,242] INFO qsq : cp /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:30:35,242] ERROR qsq : cp: cannot create regular file `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:30:35,248] INFO qsq : cp /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:30:35,248] ERROR qsq : cp: cannot create regular file `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:30:35,253] INFO qsq : cp /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/
+[2014-05-24 02:30:35,254] ERROR qsq : cp: cannot create regular file `/root/workspace/lingyun/qsq/install/hadoop2.2.0/etc/hadoop/': No such file or directory
+
+[2014-05-24 02:32:46,368] INFO qsq : cp /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 02:32:46,374] INFO qsq : cp /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 02:32:46,379] INFO qsq : cp /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 02:32:46,383] INFO qsq : cp /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 02:32:46,388] INFO qsq : cp /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 02:32:46,393] INFO qsq : cp /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:18:54,825] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:18:54,830] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:18:54,835] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:18:54,840] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:18:54,845] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:18:54,850] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:21:18,793] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:21:18,798] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:21:18,803] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:21:18,807] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:21:18,812] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 04:21:18,817] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:15,098] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:15,103] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:15,108] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:15,112] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:15,117] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:15,121] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:31,387] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:31,392] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:31,397] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:31,402] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:31,407] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:29:31,412] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:30:55,977] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:30:55,982] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:30:55,988] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:30:55,993] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:30:55,998] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:30:56,003] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:32:37,429] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:32:37,435] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:32:37,440] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:32:37,445] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:32:37,450] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:32:37,455] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:35:00,900] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:35:00,906] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:35:00,911] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:35:00,915] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:35:00,920] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 05:35:00,925] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:25:59,289] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:25:59,294] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:25:59,299] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:25:59,303] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:25:59,308] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:25:59,312] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:28:09,097] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:28:09,102] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:28:09,107] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:28:09,112] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:28:09,117] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:28:09,123] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:28:09,123] INFO qsq : 系统基础配置已完毕
+开始配置NFS
+
+[2014-05-24 06:28:26,223] INFO qsq : yum install -y nfs-utils rpcbind
+[2014-05-24 06:28:26,271] INFO qsq : mkdir -p /usr/opt/
+[2014-05-24 06:28:26,276] INFO qsq : echo '/usr/opt/ *(rw,no_root_squash,sync)' >> /etc/exports
+[2014-05-24 06:28:26,283] INFO qsq : mkdir -p /root/.ssh/
+[2014-05-24 06:28:26,287] INFO qsq : echo '/root/.ssh/ *(rw,no_root_squash,sync)' >> /etc/exports
+[2014-05-24 06:28:26,294] INFO qsq : mkdir -p /root/tmp/
+[2014-05-24 06:28:26,298] INFO qsq : echo '/root/tmp/ *(rw,no_root_squash,sync)' >> /etc/exports
+[2014-05-24 06:28:26,345] INFO qsq : service rpcbind start
+[2014-05-24 06:28:26,383] INFO qsq : service nfs start
+[2014-05-24 06:28:26,418] INFO qsq : chkconfig --level 2345 rpcbind on
+[2014-05-24 06:28:27,018] INFO qsq : chkconfig --level 2345 nfs on
+[2014-05-24 06:33:00,066] INFO qsq : mv /root/workspace/lingyun/qsq/install/core-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:33:00,071] INFO qsq : mv /root/workspace/lingyun/qsq/install/hdfs-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:33:00,076] INFO qsq : mv /root/workspace/lingyun/qsq/install/yarn-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:33:00,081] INFO qsq : mv /root/workspace/lingyun/qsq/install/mapred-site.xml /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:33:00,086] INFO qsq : mv /root/workspace/lingyun/qsq/install/slaves /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:33:00,091] INFO qsq : mv /root/workspace/lingyun/qsq/install/hadoop-env.sh /root/workspace/lingyun/qsq/install/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 06:33:00,092] INFO qsq : 系统基础配置已完毕
+开始配置NFS
+
+[2014-05-24 06:33:01,389] INFO qsq : yum install -y nfs-utils rpcbind
+[2014-05-24 06:33:01,394] INFO qsq : mkdir -p /usr/opt/
+[2014-05-24 06:33:01,398] INFO qsq : echo '/usr/opt/ *(rw,no_root_squash,sync)' >> /etc/exports
+[2014-05-24 06:33:01,403] INFO qsq : mkdir -p /root/tmp/
+[2014-05-24 06:33:01,407] INFO qsq : echo '/root/tmp/ *(rw,no_root_squash,sync)' >> /etc/exports
+[2014-05-24 06:33:01,430] INFO qsq : service rpcbind start
+[2014-05-24 06:33:01,464] INFO qsq : service nfs start
+[2014-05-24 06:33:01,470] INFO qsq : chkconfig --level 2345 rpcbind on
+[2014-05-24 06:33:01,545] INFO qsq : chkconfig --level 2345 nfs on

@@ -1,0 +1,40 @@
+{%extends "newbase.html" %} {% load staticfiles %} 
+{% block title%}第六步{% endblock %} {% block content %}
+<div id="Service" class="thumnail">
+	<form action="" method="post">
+		<h5 style="margin: 15px;">
+			<strong> 参数设置</strong>
+		</h5>
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-toggle="collapse"
+							data-parent="#accordion" href="#collapseOne"> spark-site </a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in">
+					<div class="panel-body">
+
+						{% csrf_token %}
+						{% for field in form %}
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">{{ field.label_tag }}</label> 
+								{% if field.errors %}
+							<div class="alert alert-error">{{field.errors }}</div>
+							{% endif %} {{ field }}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div style="float: right; margin-right: 100px;">
+					<button type="submit" class="btn btn-success btn-sm ">下一步</button>
+				</div>
+	</form>
+</div>
+</div>
+</div>
+</body>
+{% endblock %}
+

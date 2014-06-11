@@ -1,0 +1,17 @@
+#!/usr/bin/expect -f 
+
+spawn ssh-keygen -t rsa
+set timeout 30
+expect "Enter file in*"
+set timeout 30
+send "\n\r"
+set timeout 30
+expect "Enter passphrase *"
+set timeout 30
+send "\n\r"
+set timeout 30
+expect "Enter same passphrase *"
+set timeout 30
+send "\n\r"
+set timeout 30
+expect eof

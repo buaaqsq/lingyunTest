@@ -1,0 +1,69 @@
+{%extends "newbase.html" %} {% load staticfiles %} 
+{% block title%}第六步{% endblock %}
+{% block extra_head %}
+		<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+		<link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" />
+
+		<link rel="stylesheet" href="{% static 'assets/css/ace-fonts.css' %}" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="{% static 'assets/css/ace.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'assets/css/ace-rtl.min.css' %}" />
+ {% endblock %}
+ {% block content %}
+<div id="Service" class="thumnail">
+	<h4 class="header blue lighter bigger">
+		<i class="icon-coffee green"></i> 参数设置
+	</h4>
+	<form action="" method="post">
+	{% csrf_token %}
+	<fieldset>
+		 <div class="field">        
+        <p><h5 for="input1" class="header blue lighter bigger" >&nbsp;core-site</h5></p>
+        <hr>
+        <table>       
+           {{coreForm.as_table}}
+           </table>
+     </div>
+     		  	<div class="field">        
+        <p><h5 for="input1" class="header blue lighter bigger" >&nbsp;hdfs-site</h5></p>
+        <hr>
+               <table>       
+           {{hdfsForm.as_table}}
+           </table>
+     </div>
+     <div class="field">        
+        <p><h5 for="input1" class="header blue lighter bigger" >&nbsp;mapred-site</h5></p>
+        <hr>
+                       <table>       
+           {{mapredForm.as_table}}
+           </table>
+     </div>	  	
+     	<div class="field">        
+        <p><h5 for="input1" class="header blue lighter bigger" >&nbsp;yarn-site</h5></p>
+        <hr>                       
+        <table>       
+           {{yarnForm.as_table}}
+           </table>
+     </div>
+     <div class="field">        
+        <p><h5 for="input1" class="header blue lighter bigger">&nbsp;hadoop-env.sh</h5></p>
+        <hr>                               
+        <table>       
+           {{hadoopEnvForm.as_table}}
+           </table>
+     </div>			
+				
+				<div style="float: right; margin-right: 100px;">
+					<button type="submit" class="btn btn-success btn-sm ">下一步</button>
+				</div>
+				</fieldset>
+	</form>
+</div>
+</div>
+</div>
+</body>
+{% endblock %}
+
+

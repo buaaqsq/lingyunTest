@@ -1,0 +1,17 @@
+{%extends "Base.html" %}
+
+{%block content %}
+    <div style="width:1000px;">
+        {% for m in components%}
+            <divstyle="width:240px;float:left;">
+                <div>{{m.name}}</div>
+                <div版本：{{m.version}}</div>                     
+                <br/>
+                <divstyle="width:240px;text-align:center">
+                    <a href="#">查看详情</a>
+               </div>
+                <br/>
+            </div>           
+        {% endfor%}     
+    </div>
+{%endblock%}

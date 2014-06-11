@@ -1,0 +1,163 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Services</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+<link href="{% static 'js/boot.js' %}" rel="stylesheet" media="screen">
+<style type="text/css">
+form{
+	margin:10px;
+		}
+.thumnail{
+	min-height:700px;
+	display:block;
+	padding:10px;
+	width:100%;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+	background-color:rgb(255,255,255);
+	}	
+	.color1{ background-color:#FF0000}
+	.color2{ background-color:#00FF00}
+	.color3{ background-color:#0000FF}
+	.color4{ background-color:#FFFF00}
+	.color5{ background-color:#FF00FF}
+	.color6{ background-color:#00FFFF}
+	.color7{ background-color:#000000}
+	
+	.black{ background-color:#000000}
+	.service{ width:100%; margin:5px 0px 5px 0px}
+	.icon{ background-color:#000000; margin:0px 0px 0px 0px }
+</style>
+</head>
+<body style="width:92%; margin-left:4%;" onLoad="onload()">
+<div class="thumnail" style=" float:left; width:20%; min-width:200px; min-height:300px; margin:20px auto; border:1px solid rgb(255,255,255);">
+
+				<div class="well-sm service color6" onClick="disMsg('HDFS')" onMouseOver="mouseOver()"><label class="well-sm icon"></label>&nbsp;&nbsp;HDFS</div>
+				<div class="well-sm service color6" onClick="disMsg('MapReduce')" onMouseOver="mouseOver()"><label class="well-sm icon"></label>&nbsp;&nbsp;MapReduce</div>
+				<div class="well-sm service color6" onClick="disMsg('HBase')" onMouseOver="mouseOver()"><label class="well-sm icon"></label>&nbsp;&nbsp;HBase</div>
+				<div class="well-sm service color6" onClick="disMsg('Oozie')" onMouseOver="mouseOver()"><label class="well-sm icon"></label>&nbsp;&nbsp;Oozie</div>
+				<div class="well-sm service color6" onClick="disMsg('Ganglia')" onMouseOver="mouseOver()"><label class="well-sm icon"></label>&nbsp;&nbsp;Ganglia</div>
+				<div class="well-sm service color6" onClick="disMsg('Nagios')" onMouseOver="mouseOver()"><label class="well-sm icon"></label>&nbsp;&nbsp;Nagios</div>
+				<div class="well-sm service color6" onClick="disMsg('ZooKeeper')" onMouseOver="mouseOver()"><label class="well-sm icon"></label>&nbsp;&nbsp;ZooKeeper</div>
+				<div class="well-sm service color6" onClick="disMsg('Clients')" onMouseOver="mouseOver()"><label class="well-sm icon"></label>&nbsp;&nbsp;Clients</div>
+<br/>
+<h1 align="center">
+				<input type="button" value="  + Add Service  " onClick="addService()" style="font-size:large">
+</h1>
+
+</div>
+
+<div class="thumnail" style=" float:right; width:76%; min-height:100px; margin:20px auto; border:1px solid rgb(221,221,221);">
+				<div>
+								<label class="well-sm color6" onClick="hidden_dis( 'configs', 'sunmary' )">Summary</label>
+								<label class="well-sm color6" onClick="hidden_dis( 'sunmary', 'configs' )">Configs</label>
+				</div>
+				<br/><br/>
+				
+	<div id="sunmary">
+								<div class="well well-sm" style="background-color: rgb(230,241,245);width:100%;"><strong>Summary</strong></div>
+
+								<table width="100%" border="0" cellspacing="50" cellpadding="2">
+									<tr>
+										<th width="42%" scope="row"><div align="right">NameNode</div></th>
+										<td width="55%"><div align="left">m,sdfhksdhflksdnfkl</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">Vision</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div align="right">列项</div></th>
+										<td><div align="left">列值</div></td>
+									</tr>
+								</table>
+				</div>
+					
+					<div id="configs">
+									<div class="well well-sm" style="background-color: rgb(230,241,245);width:100%;"><strong>Configs</strong></div>
+									<table width="100%" border="0" cellspacing="0" cellpadding="2">
+										<tr>
+											<td></td>
+											<td>&nbsp;</td>
+										</tr>
+									</table>
+				</div>
+					
+</div>
+</body>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+function onload()
+{
+		hidden_dis( 'configs', 'sunmary' );
+}
+function addService()
+{
+		alert("addService()函数还未完成！");
+}
+function disMsg( str )
+{
+		alert("显示"+str+"相关信息！");
+}
+function mouseOver()
+{
+}
+function hidden_dis( hideID, disID )
+{
+				var hide = document.getElementById( hideID );
+				hide.style.display = 'none';
+				var dis = document.getElementById( disID );
+				dis.style.display = 'block';
+}
+</script>
+</html>

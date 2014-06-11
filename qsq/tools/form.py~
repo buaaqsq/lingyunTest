@@ -1,0 +1,8 @@
+from django import forms
+from models import hbase_settings
+
+class BlogForm(forms.Form):
+	hbaseParams = hbase_settings.objects.filter(level='0')
+	names = locals()
+	for p in hbaseParams:
+	    	names['%s' % p.value] = forms.CharField(label=p.value,widget=forms.Text)

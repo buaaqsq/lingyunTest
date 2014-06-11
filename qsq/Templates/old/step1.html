@@ -1,0 +1,49 @@
+{% load staticfiles %}  
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>第一步</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+<link href="{% static 'css/install.css' %}" rel="stylesheet" media="screen"></head>
+<body>
+<div id="Install" class="thumnail">
+ <form action="" method="post">
+  {% csrf_token %} 
+  <h3><strong>安装说明</strong></h3>
+	<div class="well well-sm" style="background-color: rgb(230,241,245);width:550px;">输入集群的名称和各个节点的名称、密码。</div>
+  <h4><strong>集群安装</strong></h4>
+    
+     <div class="field">        
+        <label for="input1" class="col-md-4 control-label"  style="float:left;">&nbsp;输入您的集群名称：</label>
+         {% if form.clustername.errors %}
+         <div class="alert alert-error">
+             {{ form.clustername.errors }}
+         </div>
+         {% endif %}
+         {{ form.clustername }}
+     </div>
+  <h4><strong>节点名</strong></h4>
+  <p>输入您集群中节点名和密码</p>
+  <div class="field">              
+         {% if form.nodes.errors %}
+         <div class="alert alert-error">
+             {{ form.nodes.errors }}
+         </div>
+         {% endif %}
+         {{ form.nodes }}
+     </div>
+  <p></p>
+  <div>
+	  <div style="float:left;">
+	  点击下一步将自动安装ssh无密码访问</div>
+	  <div  style="float:right; margin-right:200px;">
+	  <button type="submit" class="btn btn-success btn-sm ">下一步</button>
+	  </div>
+  </div>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+{% load staticfiles %}  
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>北航凌云系统</title>
+
+<meta content="MSHTML 6.00.2900.2180" name="GENERATOR">
+<link href="{% static 'css/2j.css' %}" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	background-image:url({% static "resources/bg.jpg" %});
+	margin-right: 0px;}
+.conleft{
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+	}
+</style>
+</head>
+
+<body>
+<div class="conleft">
+<div class="title2j"><a href="#"> 部署</a></div>
+<div class="title3j"><a href="#" onClick="javascript:parent.content.location.replace('1.html');">节点</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('install/service.html');">软件</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('install/install.html');">安装</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('install/test.html');">测试</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('1.html');">总结</a>
+</div>
+  
+  <div class="title2j"> <a href="#">管理</a></div>
+<div class="title3j">
+      <a href="#" onClick="javascript:parent.content.location.replace('manager/configuration.html');">配置更改</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('manager/snapshot.html');">数据快照</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('1.html');">Namenode联盟</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('1.html');">Namenode切换</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('1.html');">服务管理</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('1.html');">更新</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('1.html');">日志查看</a>
+</div>
+  
+  <div class="title2j"> <a href="#">监控</a></div>
+<div class="title3j">
+      <a href="#" onClick="javascript:parent.content.location.replace('1.html');">数据监控</a>
+      <a href="#" onClick="javascript:parent.content.location.replace('monitor/task_monitor.html');">任务监控</a>
+    <a href="#" onClick="javascript:parent.content.location.replace('1.html');">硬件监控</a><!--monitor/hardwaremonitor.html-->
+      <a href="#" onClick="javascript:parent.content.location.replace('http://192.168.2.106/ganglia/');">集群监控</a>
+<p>&nbsp;</p>
+<table width="165px" border="1" class="title3j">
+  <tr>
+    <th scope="col">CUP总个数</th>
+    <th scope="col">240</th>
+  </tr>
+  <tr>
+    <th scope="col">主机UP</th>
+    <th scope="col">10</th>
+  </tr>
+  <tr>
+    <th scope="col">主机DOWN</th>
+    <th scope="col">0</th>
+  </tr>
+</table>
+<table width="165px" border="1" class="title3j">
+  <tr>
+    <th scope="col" colspan="2">当前平均负载（15,5,1分钟）</th>
+  </tr>
+  <tr>
+    <th scope="col" colspan="2">1%</th>
+  </tr>
+  <tr>
+    <th scope="col" colspan="2">平均利用率（最近hour）</th>
+  </tr>
+  <tr>
+    <th scope="col" colspan="2">1%</th>
+  </tr>
+</table>
+</div>
+</body></html>

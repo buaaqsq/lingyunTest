@@ -1,0 +1,110 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+<style type="text/css">
+form{
+	margin:10px;
+		}
+.thumnail{
+	min-height:700px;
+	display:block;
+	padding:10px;
+	width:100%;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+	background-color:rgb(255,255,255);
+	}	
+	.icon{ background-color:#000000; margin:0px 0px 0px 0px }
+</style>
+</head>
+<body style="width:92%; margin-left:4%;" onLoad="onload()">
+<div class="thumnail" style=" float:left; width:45%; min-height:300px; margin:20px auto; border:1px solid rgb(255,255,255);">
+<div class="well well-sm" style="background-color: rgb(230,241,245);width:100%;"><strong>Services</strong></div>
+
+<table width="100%" border="2" cellspacing="0" cellpadding="2" bordercolor="#99CCFF">
+				<tr>
+					<td><a onClick="isHidden('hide1');" href="#"><label class="well-sm icon"></label>&nbsp;&nbsp;HDFS</a></td>
+					<td>3 of 3 nodes live, 12.3% capacity used </td>
+				</tr>
+				<tr id="hide1">
+					<td colspan="2">隐藏的内容</td>
+				</tr>
+				<tr>
+					<td><a onClick="isHidden('hide2')" href="#"><label class="well-sm icon"></label>&nbsp;&nbsp;MapReduce</a></td>
+					<td>3 of 3 Trackers live, 0 jobs running, 0 jobs waiting </td>
+				</tr>
+				<tr id="hide2">
+					<td colspan="2" width="100%">隐藏的内容</td>
+				</tr>
+				<tr>
+					<td><a onClick="isHidden('hide3')" href="#"><label class="well-sm icon"></label>&nbsp;&nbsp;HBase</a></td>
+					<td>3 region servers with 1.666667 average load </td>
+				</tr>
+				<tr id="hide3">
+					<td colspan="2">隐藏的内容</td>
+				</tr>
+				<tr>
+					<td><a onClick="isHidden('hide')" href="#">Hive/HCat</a></td>
+					<td>HiveServer2, Hive Metastore, 1 Hive Client </td>
+				</tr>
+				<tr>
+					<td><a onClick="isHidden('hide')" href="#">ZooKeeper</a></td>
+					<td>3 of 3 Zookeepers running </td>
+				</tr>
+	</table>
+			
+</div>
+	
+<div class="thumnail" style=" float:right; width:45%; min-height:300px; margin:20px auto; border:1px solid rgb(221,221,221);">
+	
+			<div class="well well-sm" style="background-color: rgb(230,241,245);width:100%;">
+			<strong>Cluster Motrics </strong></div>
+			
+		<table width="100%" border="0" cellspacing="2" cellpadding="2">
+		<tr>
+			<td><table width="100%" border="0" cellspacing="5" cellpadding="5">
+				<tr>
+					<td><div align="center"><img src="../resources/1.png" width="251" height="162"></div></td>
+					<td><div align="center"><img src="../resources/2.png" width="223" height="135"></div></td>
+				</tr>
+				<tr>
+					<td><div align="center"><img src="../resources/3.png" width="257" height="141"></div></td>
+					<td><div align="center"><img src="../resources/4.png" width="208" height="119"></div></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table>
+</div>
+</body>
+
+<script>
+function onload()
+{
+				crossColor();
+				update();
+}
+function crossColor()
+{
+					var tableCount = document.getElementsByTagName('table').length; 
+					for( var tableIndex = 0; tableIndex < tableCount; tableIndex++ ) 
+					{
+									var table = document.getElementsByTagName('table')[tableIndex];
+									var rows = table.rows;
+									for( var i = 0; i < rows.length; i++ ) 
+									{
+													rows[i].bgColor = "#FFFFFF";
+									}
+					}
+}
+function isHidden(oDiv)
+{
+				var vDiv = document.getElementById(oDiv);
+				vDiv.style.display = (vDiv.style.display == 'none')?'block':'none';
+}
+</script>
+</html>

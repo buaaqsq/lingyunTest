@@ -1,0 +1,82 @@
+{%extends "newbase.html" %} {% load staticfiles %} 
+{% block title%}第六步{% endblock %} {% block content %}
+<div id="Service" class="thumnail">
+	<form action="" method="post">
+		<h5 style="margin: 15px;">
+			<strong> 参数设置</strong>
+		</h5>
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-toggle="collapse"
+							data-parent="#accordion" href="#collapseOne"> spark-site </a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in">
+					<div class="panel-body">
+
+						{% csrf_token %}
+						{% for field in form %}
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">{{ field.label_tag }}</label> 
+								{% if field.errors %}
+							<div class="alert alert-error">{{field.errors }}</div>
+							{% endif %} {{ field }}
+						</div>
+						{% endfor %}
+<!-- 
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">spark.local.dir</label> {% if
+							form.Spark_local_dir.errors %}
+							<div class="alert alert-error">{{
+								form.Spark_local_dir.errors }}</div>
+							{% endif %} {{ form.Spark_local_dir }}
+						</div>
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">spark.executor.memory</label> {% if
+							form.Spark_executor_memory.errors %}
+							<div class="alert alert-error">{{
+								form.Spark_executor_memory.errors }}</div>
+							{% endif %} {{ form.Spark_executor_memory }}
+						</div>
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">spark.serializer</label> {% if
+							form.Spark_serializer.errors %}
+							<div class="alert alert-error">{{
+								form.Spark_serializer.errors }}</div>
+							{% endif %} {{ form.Spark_serializer }}
+						</div>
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">spark.kryo.registrator</label> {% if
+							form.Spark_kryo_registrator.errors %}
+							<div class="alert alert-error">{{
+								form.Spark_kryo_registrator.errors }}</div>
+							{% endif %} {{ form.Spark_kryo_registrator }}
+						</div>
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">spark.cores.max</label> {% if
+							form.Spark_cores_max.errors %}
+							<div class="alert alert-error">{{
+								form.Spark_cores_max.errors }}</div>
+							{% endif %} {{ form.Spark_cores_max }}
+						</div>
+-->
+					</div>
+				</div>
+				<div style="float: right; margin-right: 100px;">
+					<button type="submit" class="btn btn-success btn-sm ">下一步</button>
+				</div>
+	</form>
+</div>
+</div>
+</div>
+</body>
+{% endblock %}
+

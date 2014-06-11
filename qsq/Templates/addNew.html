@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登陆成功</title>
+</head>
+<style  type="text/css">
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+body,table,td,div {
+	font-size: 12px;
+	line-height: 24px;
+}
+form{
+	margin:10px;
+	}
+.thumnail{
+	min-height:700px;
+	display:block;
+	padding:10px;
+	width:100%;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+	background-color:rgb(255,255,255);
+	}
+.textfile {background:url(img/bg_form.jpg) no-repeat left top; padding: 0px 2px; height: 29px; width: 143px; border: 1; }
+</style>
+<script type="text/javascript">
+
+function check()
+{
+	if(document.form1.username.value=="" || document.form1.password.value=="" || document.form1.password1.value=="")
+	{
+		if(document.form1.username.value=="")
+		{
+			document.getElementById('message').innerHTML = "请设置用户名！";
+		//	alert("请设置用户名！");
+			return false;
+		}
+		if(document.form1.password.value=="")
+		{
+			document.getElementById('message').innerHTML = "请设置密码！";
+		//	alert("请设置密码！");
+			return false;
+		}
+		if(document.form1.password1.value=="")
+		{
+			document.getElementById('message').innerHTML = "请确认密码！";
+		//	alert("请确认密码！");
+			return false;
+		}
+	}
+	else
+	{
+		if( document.form1.password.value != document.form1.password1.value )
+		{
+			document.getElementById('message').innerHTML = "两次密码输入不一致！";
+			return false;
+		}
+		else
+		{
+			document.getElementById('message').innerHTML = "注册成功！";
+		/*	var dis=document.getElementById(id);
+			dis.style.display='none';*/
+		//	alert("注册成功！");
+		//	document.form1.action="../login_success.html";
+		//	document.form1.submit();
+		}
+	}
+	document.form1.submit();
+	return true;
+}
+function changeReadonly(id)
+{/*
+	if( document.form1.password.value != '' )
+	{
+		document.getElementById(id).readOnly = false;
+	}
+	else
+	{
+		document.getElementById(id).value = '';
+	//	document.getElementById(id).readOnly = 'readOnly';
+	}*/
+}
+function checkPwd()
+{
+	if(document.form1.password.value != document.form1.password1.value)
+	{
+		document.getElementById('message').innerHTML = "两次密码输入不一致！";
+	}
+	else
+	{
+		document.getElementById('message').innerHTML = "";
+	}
+}
+</script>
+<script>
+function showForm(id)
+{
+	var dis=document.getElementById(id);
+	dis.style.display='block';
+}
+</script>
+<body>
+
+<input type=button name="隐藏" onClick="showForm('sign')" value="添加新用户">
+<div class="thumnail" align="center" style="width:40%; min-height:300px; margin-left:30%; margin-top:10%; border:1px solid rgb(221,221,221); background:url(img/bg.jpg); display:none;" id="sign">
+	
+			<div class="well" style="background:url(img/bg.jpg); width:100%; border:hidden">
+			  <h3>用户登录</h3>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="99">&nbsp;</td>
+        <td background="images/bg_form.jpg"><table width="250" border="0" align="center" cellpadding="0" cellspacing="0">
+          <form id="form1" name="form1" method="post" action=""><tr>
+            <td height="35" align="right">用户名：</td>
+            <td>
+              <label>
+                <input name="username" type="text" class="textfile" border="2" id="username"  />
+                </label>            </td>
+          </tr>
+          <tr>
+            <td height="35" align="right">密&nbsp;&nbsp;码：</td>
+            <td><label>
+              <input name="password" type="password" class="textfile" onchange="changeReadonly('password1')" />
+            </label></td>
+          </tr>
+          <tr>
+            <td height="35" align="right">再次确认：</td>
+            <td><label>
+              <input name="password1" type="password" id="password1" class="textfile" onchange="checkPwd()" />
+            </label>
+            </td>
+          </tr>
+          <tr>
+            <td height="35">&nbsp;</td>
+            <td><label>
+              <input type="button" name="Submit" value="确定" onclick="check();" />
+              <input type="reset" name="Submit2" value="重置"  />
+            </label></td>
+          </tr>
+          <tr>
+            <td height="30">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td height="30"></td>
+            <td height="30" id="message" style="color:#F00"></td>
+          </tr>
+          </form>
+        </table></td>
+        <td width="98" align="right">&nbsp;</td>
+      </tr>
+    </table>
+    </div>
+</div>
+</body>
+</html>

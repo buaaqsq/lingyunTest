@@ -1,0 +1,437 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------
+[master stylesheet]
+project:       art college test class
+version:       1.1
+primary use:   test class
+-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------[layout]--------------------------------------------------------------------
+* body
+	  + top
+	  + head 
+	  		- menu
+			+ submenu
+      	 		- scroll 
+				- time
+			
+      + content 
+            + con_left  
+				-loginbar
+				-searchbar
+				-mailbar
+				
+            + con_right 
+            	+ news
+					- newstitle
+					- newsitem
+				+ gallery
+                    - gallerytitle
+					- galleryimg
+					
+      + footer / #footer  
+----------------------------------------------------------[end]------------------------------------------------------------------- */
+/**---------------------[css reset]-----------------------**/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+}
+/*{a{blr:expression(this.onFocus=this.close());}  只支持IE，过多使用效率低 */
+
+/*a{blr:expression(this.onFocus=this.blur());}  只支持IE，过多使用效率低 */
+
+/*a:focus { -moz-outline-style: none; }  IE不支持 */ 
+/*--------------------------------------------------------[general framework]------------------------------------------------------*/
+body {
+/*	background: #fff url(../img/bg.png) repeat-y center;*/
+}
+body>#body_box {
+	height: auto;
+	min-height: 100%;
+}
+body, #body_box {
+	margin: 0px auto;
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+	text-align: left;
+	word-wrap: break-word;
+	margin-left: 0px;
+	margin-top: 5px;
+}
+/*-----------------------------------------------------------------[+ main clearfix]-----------------------------------------------*/
+#main {
+	padding-bottom: 50px;
+}
+/* 必须使用和footer相同的高度 
+clearfix属性控制footer保持在屏幕底部*/
+/*---------------------------------[clearfix]-----------------------------------*/
+.clearer {
+	clear: both;
+	display:block;
+  height:100px;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac */
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+/*---------------------------------[top 1005*100px]----------------------------------------*/
+#top {
+	margin: 0px;
+	width: auto;
+	height: 100px;
+	background: url(../img/top.png); /*1005*100px*/
+}
+/*-------------------------------[+ head 1005*100px]---------------------------------------*/
+#head {
+	margin: 0px;
+	width: auto;
+	height:79px !important;
+	height:78px;/**/
+	background:url(../img/head.png);/*1005*80px*/
+}
+/* End hide from IE-mac */
+/*---------------------[- navmenu]-------------------*/
+div.navmenu ul {
+	float: left;
+ *margin:0px !important;
+ *margin:1px 0px 0px 0px;
+}
+div.navmenu li {
+	list-style-type: none;
+	list-style-image: none;
+	padding:1px 0px 0px 0px !important;
+	padding:0px;/*ie*/
+}
+div.navmenu a#current {
+	background: #bbb;
+	color: #000; /*navigation button first bg color*/
+}
+div.navmenu a {
+	width: 137px;   /*137+5+20+3=165*/
+	height:15px;/*IE 15+5+5+1=26*/
+	display: block;
+	background: #5e8000;
+	padding: 5px 5px 5px 20px;
+	border-left: solid 3px #deff00;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: #fff;
+}
+div.navmenu a:hover {
+	filter:alpha(opacity=50);       /* IE */
+	-moz-opacity:0.5;              /* Moz + FF */
+	opacity: 0.5;           /* 支持CSS3的浏览器（FF 1.5也支持）*/
+	cursor: hand;
+}
+/*--------------------[- submenu]------------------*/
+div.submenu ul {
+	float: right;
+}
+div.submenu li {
+	list-style-image: none;
+	list-style-type: none;
+	margin: 0px;
+	padding:0px 0px 1px 0px !important;
+	padding: 0px;
+	border-left: solid 5px #deff00;
+}
+/*div.submenu a {
+	width: 190px;
+	display: block;
+	padding: 5px 5px 5px 5px;
+	font-family: sans-serif;
+	font-size: 95%;
+	text-decoration: none;
+	background: #1e94d8;
+	color: #fff;
+}
+div.submenu a#current {
+	background: #ccc;
+	color: #000;
+}
+div.submenu a:hover {
+	-moz-opacity: 0.5;
+	filter: alpha(opacity=50);
+	cursor: hand;
+}
+*/
+.visitor, .scroll {
+	width: 312px; /*312+5+20+3=340*/
+	height:15px;
+	display: block;
+	padding: 5px 5px 5px 20px;
+	border-left: solid 3px #1d4400;
+	font-family: sans-serif;
+	text-decoration: none;
+ filter: progid:dximagetransform.microsoft.gradient( gradienttype =1 startcolorstr=#33ffffff, endcolorstr=#66ffffff);/* IE */
+}
+/*---------------------------------------------------------[+ content]-------------------------------------------------------------*/
+#content {
+	width:100%;
+}
+/*-------------------------------[- conleft]---------------------------------- */
+div.conleft {
+	float: left;
+	width: 165px;
+}
+/*---------------------[-1jtitle]-------------------*/
+div.conleft .title1j {
+	padding: 5px 0px 5px 15px;
+	border-top: solid 1px #ccc;
+	border-left: solid 3px #deff00;
+	background: url(../img/conleftt.gif) no-repeat #1e3600;
+	font: bold 12px sans-serif;
+	color: #fff;
+}
+/*---------------------[-2jtitle]-------------------*/
+div.conleft .title2j {
+	padding:0px 0px 0px 15px;
+	border-top: solid 1px #ccc;
+	border-left: solid 3px #deff00;
+	background: url(../img/conleftt.gif) no-repeat #999;
+	font:bold 14px sans-serif;
+	color: #fff;
+}
+div.conleft .title2j a {
+	height: 25px;
+	line-height:25px;
+	text-decoration: none;
+	color:#FFF;
+}
+div.conleft .title2j a:hover {
+	color: #CF6;
+}
+/*---------------------[-3jtitle]-------------------*/
+div.title3j {
+	width:165px;
+}
+div.title3j a {
+	display: block;
+/*	background:url(../resources/bg.png) repeat-x #fff;*/
+	padding: 5px 0 5px 15px;
+	border-left:solid 1px #8bd103;
+	border-bottom: 1px solid #ccc;
+	font:12px "sans-serif";
+	text-decoration: none;
+	color:#333;
+}
+div.title3j a:hover {
+	background-position: left bottom;
+/*	background:url(../resources/bg.png) repeat-x #fff;*/
+}
+/*----------------------------------[conright]---------------------------------*/
+div.conright {
+	float: left;
+	width: 839px;
+}
+/*---------------------[news]---------------------*/
+div.news {
+	float: left;
+	width: 100%;
+	background: #fff;
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+}
+/*--------[newitem]----------*/
+div.newsitem {
+	float:left;
+	width:839px !important;
+	width:auto;
+}
+div.newsitem .btn {
+	width: auto;
+	height: 26px;
+	font-size: 12px;
+	text-align:left;
+	background-color: #aaa;
+	font-family: "tahoma", "黑体";
+	font-weight: bold;
+	overflow: hidden;
+	list-style: none;
+	cursor: hand;
+}
+div.newsitem .btn a {
+	display: block;
+	padding: 5px 5px 5px 20px;
+	border-top: solid 1px #ccc;
+	border-left: solid 5px #deff00;
+	margin: 0px;
+	text-decoration: none;
+	color: #fff;
+}
+div.newsitem .btn a:hover {
+	background-color: #eee;
+	color: #9BC11A;
+}
+div.newscontent {
+	width: auto;
+	height:100%;
+	margin: 5px 5px 5px 5px;
+	padding:10px;
+	border: 1px solid #eee; /**/
+	background: #eee;
+	color: #333;
+}
+div.newscontent .p {
+	font: 12px "宋体" "楷体_gb2312""仿宋_gb2312";
+	text-align: justify;
+	line-height: 30px;
+}
+div.newscontent ul {
+	margin: 0px 0px 0px 20px;
+}
+div.newscontent li {
+	height:30px;
+	line-height:22px;
+	list-style-image: url(../img/li1.png);
+	font-family: "宋体", "楷体_gb2312", "仿宋_gb2312";
+	font-size: 13px;
+}
+div.newscontent a {
+	text-decoration: none;
+	list-style-image: url(../img/li1.png);
+	font-family: "宋体" "楷体_gb2312""仿宋_gb2312";
+	font-size: 13px;
+	color: #333;
+}
+div.newscontent a:hover {
+	color: #84be00;
+}
+div.newscontent img {
+	border: #fff;
+}
+/*---------------------[conright gallery]---------------------*/
+div.gallery {
+	float: left;/**/
+	width: 200px;
+	text-align: center;
+}
+/*--------[scrollimgbar]----------*/
+div.scrollimgbar {
+	float: right;
+	width: 201px;
+ *height:187px !important;
+	height:152px;
+}
+div.scrollimgbar .title {
+	width: 165px;
+	background: #a3c84e url(../img/scrollt.gif) left no-repeat;
+	padding: 6px 20px 5px 15px;
+	border-top: solid 1px #ccc;
+	border-left: solid 5px #000;
+	font: bold 12px tahoma, sans-serif;
+	text-align: left;
+	color: #fff;
+}
+div.scrollimgbar img {
+	border: solid 1px #fff;
+}
+#marqueedemo {
+	overflow: hidden;
+	width:100%;
+	text-align: right; /*border:1px solid #0066cc*/
+}
+/*--------[linkbar]----------*/
+div.link {
+	float: right;
+	width: 200px;
+}
+/*---------------[title1]-------------*/
+div.link .title1 {
+	width: 165px;
+	background: #a3c84e url(../img/scrollt.gif) left no-repeat;
+	padding: 5px 20px 5px 15px;
+	border-top: solid 1px #ccc;
+	border-left: solid 5px #333;
+	font: bold 12px "tahoma", "sans-serif";
+	text-align: left;
+	color: #fff;
+}
+div.link .title1 a {
+	font:bold 12px sans-serif;
+	text-decoration: none;
+	border-top: #ccc;
+	border-left: #000;
+	color: #fff;
+}
+div.link .title1 a:hover {
+	background-position: left bottom;
+	color: #333;
+}
+/*---------------title2-------------*/
+div.link .title2 {
+	width: 165px;
+	background: #aaa url(../img/scrollt.gif) left no-repeat;
+	padding: 5px 20px 5px 15px;
+	border-top: solid 1px #ccc;
+	border-left: solid 5px #666;
+	font: bold 12px "tahoma", "sans-serif ";
+	text-align: left;
+	color: #fff;
+}
+div.link .title2 a {
+	font:bold 12px sans-serif;
+	text-decoration: none;
+	border-top: #ccc;
+	border-left: #000;
+	color: #fff;
+}
+div.link .title2 a:hover {
+	background-position: left bottom;
+	color: #333;
+}
+/*------------subcom2------------*/
+div.link .subcom2 {
+	width:auto;
+	text-align:left;
+}
+div.link .subcom2 a {
+	width:192px;
+	display: block;
+	padding: 5px 0px 6px 10px;
+	background: url(../img/navitembg.gif) repeat-x #fff;
+	border-left:solid 3px #eee;
+	border-bottom: 1px solid #ccc;
+	font-family: sans-serif;
+	font-size: 100%;
+	text-decoration: none;
+	color:#333;
+}
+div.link .subcom2 a:hover {
+	background-position: left bottom;
+	color: #84be00;
+}
+/*-----------------------------------------------------------[footer]------------------------------------------------------------*/
+#footer {
+	position: relative;
+	width: 981px;
+	height: 50px;
+	background: #6C910E;
+	border-left: solid 20px #1e3600;
+	border-right: solid 5px #75a900;
+	margin-top: -50px; /* footer高度的负值 */
+	padding:20px 0px 0px 0px;
+	text-align: center;
+	font: "宋体", "楷体_GB2312", "仿宋_GB2312";
+	color:#eee;
+}

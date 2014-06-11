@@ -1,0 +1,91 @@
+{%extends "newbase.html" %} {% load staticfiles %} 
+{% block title%}第六步{% endblock %} {% block content %}
+<div id="Service" class="thumnail">
+	<form action="" method="post">
+		{% csrf_token %}
+		<h5 style="margin: 15px;">
+			<strong> 参数设置</strong>
+		</h5>
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-toggle="collapse"
+							data-parent="#accordion" href="#core-site"> core-site </a>
+							<a data-toggle="collapse" data-toggle="collapse"
+							data-parent="#accordion" href="#hdfs-site"> hdfs-site </a>
+							<a data-toggle="collapse" data-toggle="collapse"
+							data-parent="#accordion" href="#collapseOne"> yarn-site </a>
+							<a data-toggle="collapse" data-toggle="collapse"
+							data-parent="#accordion" href="#mapred-site "> mapred-site </a>
+					</h4>
+				</div>
+				<div yarn-siteid="core-site" class="panel-collapse collapse in">
+					<div class="panel-body">
+					
+					{% for field in form.coreForm %}
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">{{ field.label_tag }}</label> 
+								{% if field.errors %}
+							<div class="alert alert-error">{{field.errors }}</div>
+							{% endif %} {{ field }}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				
+				<div yarn-siteid="hdfs-site" class="panel-collapse collapse in">
+					<div class="panel-body">
+
+					{% for field in form.hdfsForm %}
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">{{ field.label_tag }}</label> 
+								{% if field.errors %}
+							<div class="alert alert-error">{{field.errors }}</div>
+							{% endif %} {{ field }}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				
+				<div yarn-siteid="yarn-site" class="panel-collapse collapse in">
+					<div class="panel-body">
+
+					{% for field in form.yarnForm %}
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">{{ field.label_tag }}</label> 
+								{% if field.errors %}
+							<div class="alert alert-error">{{field.errors }}</div>
+							{% endif %} {{ field }}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				
+				<div yarn-siteid="mapred-site" class="panel-collapse collapse in">
+					<div class="panel-body">
+					{% for field in form.mapredForm %}
+						<div class="field">
+							<label for="input1" class="col-md-4 control-label"
+								style="float: left;">{{ field.label_tag }}</label> 
+								{% if field.errors %}
+							<div class="alert alert-error">{{field.errors }}</div>
+							{% endif %} {{ field }}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				
+				
+				<div style="float: right; margin-right: 100px;">
+					<button type="submit" class="btn btn-success btn-sm ">下一步</button>
+				</div>
+	</form>
+</div>
+</body>
+{% endblock %}
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<table width="100%" border="0" bgcolor="#FFCCCC">
+  <tr>
+    <th scope="col" colspan="2" align="right" bgcolor="#FF99CC">Application Overview</th>
+  </tr>
+  <tr  bgcolor="#FFCCCC">
+    <td width="50%"></td>
+    <td width="50%"></td>
+  </tr>
+  User:	 root
+Name:	 random-writer
+Application Type:	 MAPREDUCE
+State:	 FINISHED
+FinalStatus:	 SUCCEEDED
+Started:	 16-Jan-2014 17:19:43
+Elapsed:	 2mins, 42sec
+Tracking URL:	History
+Diagnostics:	
+  <tr bgcolor="#FF99CC">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr bgcolor="#FFCCCC">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr bgcolor="#FF99CC">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr bgcolor="#FFCCCC">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr bgcolor="#FF99CC">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr bgcolor="#FFCCCC">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr bgcolor="#FF99CC">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr bgcolor="#FFCCCC">
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+</body>
+</html>
+

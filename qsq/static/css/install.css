@@ -1,0 +1,115 @@
+
+		.sidebar-menu{
+					border-top: 1px solid #c4c8cb;
+					border-right: 1px solid #c4c8cb;
+					width:180px;
+					margin-left:65px;
+				}
+		 .thumnail{
+			    min-height:550px;
+				display:block;
+				padding:10px;
+				width:900px;
+				box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+				}
+		/*һ���˵�*/
+		.menu-first{
+			
+			height:45px;
+			line-height:45px;
+			background-color: #e9e9e9;
+			border-top: 1px solid #efefef;
+			border-bottom: 1px solid #e1e1e1;
+			padding:0px;
+			font-size: 14px;
+			font-weight: normal;
+			text-align: center;	
+		}
+		/*һ���˵���껮��״̬*/
+		.menu-first:hover{
+			text-decoration: none;
+			background-color: #d6d4d5;
+			border-top: 1px solid #b7b7b7;
+			border-bottom: 1px solid #acacac;
+		}
+		/*�����˵�*/
+		.menu-second li a{
+			background-color: #f6f6f6;
+			height:31px;
+			line-height:31px;
+			border-top: 1px solid #efefef;
+			border-bottom: 1px solid #efefef;
+			font-size: 12px;
+	
+		}
+		/*�����˵���껮����ʽ*/
+		.menu-second li a:hover {
+			text-decoration: none;
+			background-color: rgb(238,238,238);
+			
+		}
+		/*�����˵�ѡ��״̬*/
+		.menu-second-selected {
+			background-color: #66c3ec;
+			height:31px;
+			line-height:31px;
+			border-top: 1px solid #83ceed;
+			border-bottom: 1px solid #83ceed;
+			border-right: 3px solid #f8881c;
+			border-left: 3px solid #66c3ec;
+			text-align:center;
+		}
+		/*����bootstrap����ʽ*/
+		.nav-list,.nav-list li a{
+			padding: 6px;
+			margin: 0px;
+		}
+		hr{
+			border-color:
+			   #717171;
+			  margin:5px;}
+	  .row-fluid{float:left;
+		margin:30px 20px;
+		}
+		/*Install��ʽ*/
+	  #Install{
+	  margin:20px auto;
+	    width:900px;
+		  }
+	  p{margin:10px;}
+	  .col-sm-5{
+				  padding-left:0px;
+					  }
+	  #exampleInputFile{
+				  margin:10px;}
+	  /*.form-control{
+				  margin:10px;}*/
+				  /*service��ʽ*/
+	  #Service{margin:20px auto;
+	  width:900px;
+	  padding:30px;
+			  } 
+	  #tablehead{
+				  background-color:rgb(231,231,231);}
+			  /*Parameter��ʽ*/ 
+	  .tab-pane{
+	  border-bottom:1px solid rgb(221,221,221);
+	  border-left:1px solid rgb(221,221,221);
+	  border-right:1px solid rgb(221,221,221);
+	  min-height:500px;
+	  } 
+	  .panel-body{
+		  background-color: #FFF;
+			  }
+	  .panel-heading{
+		  width:500px;
+		  background:#fff;
+		  color:#333;
+	  }
+	  .col-md-4 control-label{
+		  text-align:left;
+	  }
+	 .panel panel-default{
+		  display:block;
+		  box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+		  }

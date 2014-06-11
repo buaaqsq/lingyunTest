@@ -1,0 +1,7 @@
+message NodeInfo{
+required string cpu=1;
+required string mem=2;
+required string disk=3;
+required string os=4;
+optional string load=5;
+}

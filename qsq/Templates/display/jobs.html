@@ -1,0 +1,146 @@
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/media/images/favicon.ico" />
+			<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+		
+		<title>Jobs</title>
+		<style type="text/css" title="currentStyle">
+			@import "../DataTables-1.9.4/media/css/demo_page.css";
+			@import "../DataTables-1.9.4/media/css/demo_table.css";
+			@import "../DataTables-1.9.4/media/css/demo_table_jui.css";
+		</style>
+		<script type="text/javascript" language="javascript" src="../DataTables-1.9.4/media/js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="../DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
+	</head>
+	<body id="dt_example" style="width:90%; margin-left:5%">
+	<p></p>
+		<div class="well well-sm" style="background-color: rgb(230,241,245);width:100%" align="center">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<th scope="col"><div align="center"></div></th>
+					<th scope="col"><div align="center">Jobs</div></th>
+					<th scope="col"><div align="center">Input</div></th>
+					<th scope="col"><div align="center">Output</div></th>
+					<th scope="col"><div align="center">不清</div></th>
+					<th scope="col"><div align="center">不清</div></th>
+					<th scope="col"><div align="center">不清</div></th>
+				</tr>
+				<tr>
+					<th scope="row"><div align="center">Avg</div></th>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+				</tr>
+				<tr>
+					<th scope="row"><div align="center">Min/Max</div></th>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+					<td><div align="center"></div></td>
+				</tr>
+			</table>
+		</div>
+		<div id="container">
+			<div id="demo">
+				<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+	<thead>
+		<tr>
+			<th><div align="center">App ID </div></th>
+			<th><div align="center">Name</div></th>
+			<th><div align="center">Type</div></th>
+			<th><div align="center">User</div></th>
+			<th><div align="center">Jobs</div></th>
+			<th><div align="center">Input</div></th>
+			<th><div align="center">Output</div></th>
+			<th><div align="center">看不清</div></th>
+			<th><div align="center">Run Date </div></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr >
+			<td class="center">mr2013</td>
+			<td class="center">word count </td>
+			<td class="center">Map/Reduce</td>
+			<td class="center">user1</td>
+			<td class="center">1</td>
+			<td class="center">22KB</td>
+			<td class="center">2.1KB</td>
+			<td class="center">19.07 secs </td>
+			<td class="center">Thu,Feb,12,2013</td>
+		</tr>
+		<tr >
+			<td class="center">mr2013</td>
+			<td class="center">word count </td>
+			<td class="center">Map/Reduce</td>
+			<td class="center">user2</td>
+			<td class="center">5</td>
+			<td class="center">22KB</td>
+			<td class="center">2.1KB</td>
+			<td class="center">89.69 secs </td>
+			<td class="center">Thu,Feb,12,2013</td>
+		</tr>
+	</tbody>
+	<tfoot>
+	</tfoot>
+</table>
+			</div>
+			</div>
+	</body>
+	<script>
+	function addNewHosts()
+	{
+		alert("此函数还未完成！");
+	}
+	</script>
+	<script type="text/javascript" language="javascript" charset="utf-8">
+        $(document).ready(function() {
+            $("#example").dataTable({
+//                "bPaginate": true, //开关，是否显示分页器
+//                "bInfo": true, //开关，是否显示表格的一些信息
+//                "bFilter": true, //开关，是否启用客户端过滤器
+//                "sDom": "<>lfrtip<>",
+//                "bAutoWith": false,
+//                "bDeferRender": false,
+//                "bJQueryUI": false, //开关，是否启用JQueryUI风格
+//                "bLengthChange": true, //开关，是否显示每页大小的下拉框
+//                "bProcessing": true,
+//                "bScrollInfinite": false,
+//                "sScrollY": "800px", //是否开启垂直滚动，以及指定滚动区域大小,可设值：'disabled','2000px'
+//                "bSort": true, //开关，是否启用各列具有按列排序的功能
+//                "bSortClasses": true,
+//                "bStateSave": false, //开关，是否打开客户端状态记录功能。这个数据是记录在cookies中的，			打开了这个记录后，即使刷新一次页面，或重新打开浏览器，之前的状态都是保存下来的-			------当值为true时aoColumnDefs不能隐藏列
+//                "sScrollX": "50%", //是否开启水平滚动，以及指定滚动区域大小,可设值：'disabled','2000%'
+//                "aaSorting": [[0, "asc"]],
+//                "aoColumnDefs": [{ "bVisible": false, "aTargets": [0]}]//隐藏列
+//                "sDom": '<"H"if>t<"F"if>',
+                "bAutoWidth": false, //是否自动计算表格各列宽度
+                "aaSorting": [[1, "asc"]],
+                "sPaginationType": "full_numbers"
+ /*               "oLanguage": {
+                    "sProcessing": "正在加载中......",
+                    "sLengthMenu": "每页显示 _MENU_ 条记录",
+                    "sZeroRecords": "对不起，查询不到相关数据！",
+                    "sEmptyTable": "表中无数据存在！",
+                    "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
+                    "sInfoFiltered": "数据表中共为 _MAX_ 条记录",
+                    "sSearch": "搜索",
+                    "oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "上一页",
+                        "sNext": "下一页",
+                        "sLast": "末页"
+                    }
+                } //多语言配置*/
+ 
+            });
+        });
+    </script>
+</html>

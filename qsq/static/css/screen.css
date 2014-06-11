@@ -1,0 +1,178 @@
+
+/**
+* Round corner
+*/
+#roundtop {
+    background-image: url(../img/rc-t-r-15-1body-2menu-3menu.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+#roundbottom {
+    background-image: url(../img/rc-b-r-15-1body-2menu-3menu.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+img.corner {
+   width: 15px;
+   height: 15px;
+   border: none;
+   display: block !important;
+}
+
+.roundtopsmall {
+    background-image: url(../img/rc-t-r-5-1header-2searchbox-3searchbox.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+#roundbottomsmall {
+    background-image: url(../img/rc-b-r-5-1header-2tab-selected-3tab-selected.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+img.cornersmall {
+   width: 5px;
+   height: 5px;
+   border: none;
+   display: block !important;
+}
+/**
+ * Side menu
+ */
+#menu a {  font-weight: normal; text-decoration: none;}
+#menu a:visited {  font-weight: normal; }
+#menu a:active {  font-weight: normal; }
+#menu a:hover {  font-weight: normal;  text-decoration:underline;}
+
+#menuarea { width:10em;}
+#menu {
+    position: relative;
+    float: left;
+    width: 160px;
+    padding-top: 0px;
+    top:-18px;
+    left:10px;
+    z-index: 20;
+    background-color: #f90;
+    font-size : 80%;
+    margin:50px;
+}
+
+.menutitle {
+        cursor:pointer;
+        padding: 3px 12px;
+        margin-left: 10px;
+        background-image: url('../img/chapter.gif');
+        background-repeat: no-repeat;
+        background-position: center left;
+        font-weight : bold;
+
+        
+}
+
+.menutitle:hover{text-decoration:underline;cursor: pointer;}
+
+#menu .menuitemgroup {
+        margin: 0px 0px 6px 8px;
+        padding: 0px;
+        font-weight : bold; }
+
+#menu .selectedmenuitemgroup{
+        margin: 0px 0px 0px 8px;
+        padding: 0px;
+        font-weight : normal; 
+       
+        }
+
+#menu .menuitem {
+        padding: 2px 0px 1px 13px;
+        background-image: url('../img/page.gif');
+        background-repeat: no-repeat;
+        background-position: center left;
+        font-weight : normal;
+        margin-left: 10px;
+}
+
+#menu .menupage {
+        margin: 2px 0px 1px 10px;
+        padding: 0px 3px 0px 12px;
+        background-image: url(../img/page.gif);
+        background-repeat: no-repeat;
+        background-position: center left;
+        font-style : normal;
+}
+#menu .menupagetitle {
+        padding: 0px 0px 0px 1px;
+        font-style : normal;
+        border-style: solid;
+        border-width: 1px;
+        margin-right: 10px;
+         
+}
+#menu .menupageitemgroup {
+        padding: 3px 0px 4px 6px;
+        font-style : normal;
+        border-bottom: 1px solid ;
+        border-left: 1px solid ;
+        border-right: 1px solid ;
+        margin-right: 10px;
+}
+#menu .menupageitem {
+        font-style : normal;
+        font-weight : normal;
+        border-width: 0px;
+        font-size : 90%;
+}
+#menu #credit {
+    text-align: center;
+}
+#menu #credit2 {
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+    background-color: #ffffff;
+}
+
+
+/* ==================== aural ============================ */
+
+#menu .menupagetitle  { background-color: #CFDCED;
+  color: #000000;}
+
+#menu           { border-color: #999999;}
+#menu .menupagetitle  { border-color: #999999;}
+#menu .menupageitemgroup  { border-color: #999999;}
+
+#menu      { background-color: #4C6C8F;} 
+#menu  {  color: #ffffff;} 
+#menu a:link {  color: #ffffff;} 
+#menu a:visited {  color: #ffffff;} 
+#menu a:hover {  
+background-color: #4C6C8F;
+color: #ffffff;} 
+
+#menu h1 {
+color: #000000;
+background-color: #cfdced;
+}   
+ 
+#top .searchbox { 
+background-color: #E5E4D9 ;
+color: #000000; 
+} 
+ 
+#menu .menupageitemgroup     { 
+background-color: #E5E4D9;
+}
+#menu .menupageitem {
+color: #000000;
+} 
+#menu .menupageitem a:link {  color: #000000;} 
+#menu .menupageitem a:visited {  color: #000000;} 
+#menu .menupageitem a:hover {  
+background-color: #E5E4D9;
+color: #000000;
+}
+

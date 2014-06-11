@@ -1,0 +1,22 @@
+{%extends "newbase.html" %} {% load staticfiles %} 
+{% block title%}第三步{% endblock %} {% block content %}
+<div id="Service" class="thumnail">
+	<form method="post" action="">
+		{% csrf_token %}
+		<h4>
+			<strong>选择高可用性</strong>
+		</h4>
+		<div class="field">
+			<label for="input1" class="col-md-4 control-label"
+				style="float: left;">&nbsp;选择hadoop安装模式</label>
+			<p>&nbsp; {% if form.ha.errors %}
+			<div class="alert alert-error">{{ form.ha.errors }}</div>
+			{% endif %} {{ form.ha }}
+			</p>
+		</div>
+		<div style="float: left; margin: 250px 550px;">
+			<button type="submit" class="btn btn-success">下一步</button>
+		</div>
+	</form>
+</div>
+{% endblock %}

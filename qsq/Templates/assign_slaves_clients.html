@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assign Masters</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<style type="text/css">
+form{
+	margin:10px;
+		}
+.thumnail{
+	min-height:700px;
+	display:block;
+	padding:10px;
+	width:800px;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+	}	
+.STYLE1 {color: #FFFFFF}
+</style>
+</head>
+<body style="width:80%; margin-left:10%;" onLoad="onload()">
+<div class="thumnail" style="width:100%; min-height:300px; margin:20px auto; border:1px solid rgb(221,221,221);">
+<h3 style="margin:10px;"><strong>Assign Slaves and Clients </strong></h3> 
+<div class="well well-sm" style="background-color: rgb(230,241,245);width:100%;">Assign slave and client components to hosts you want to run them on.</br>
+Host that are assigned master components are shown with *.<br/>
+"Clients" will install HDFS Client, MapReduce Client, Hive Client, HCat Client, HBase Client and ZooKeeper Client.</div>
+    <form class="form-horizontal" role="form" action="#">
+    				<table width="100%" border="0" cellspacing="0" cellpadding="8">
+	<tr>
+		<th width="13%" scope="col">Host</th>
+		<th width="21%" scope="col"><label onClick="checkAll('subBox1');update();">all</label>&nbsp;|&nbsp;<label onClick="uncheckAll('subBox1');update();">none</label></th>
+		<th width="24%" scope="col"><label onClick="checkAll('subBox2');update();">all</label>&nbsp;|&nbsp;<label onClick="uncheckAll('subBox2');update();">none</label></th>
+		<th width="26%" scope="col"><label onClick="checkAll('subBox3');update();">all</label>&nbsp;|&nbsp;<label onClick="uncheckAll('subBox3');update();">none</label></th>
+		<th width="16%" scope="col"><label onClick="checkAll('subBox4');update();">all</label>&nbsp;|&nbsp;<label onClick="uncheckAll('subBox4');update();">none</label></th>
+	</tr>
+	<tr>
+		<td id="cloud100">cloud100</td>
+		<td><label><input type="checkbox" name="subBox1" id="DataNode100" onChange="update();"> DataNode</label></td>
+		<td><label><input type="checkbox" name="subBox2" id="TaskTracker100" onChange="update();"> TaskTracker</label></td>
+		<td><label><input type="checkbox" name="subBox3" id="RegionServer100" onChange="update();"> RegionServer</label></td>
+		<td><label><input type="checkbox" name="subBox4" id="Client100" onChange="update();"> Client</label></td>
+	</tr>
+	<tr>
+		<td id="cloud101">cloud101</td>
+		<td><label><input type="checkbox" name="subBox1" id="DataNode101" onChange="update();"> DataNode</label></td>
+		<td><label><input type="checkbox" name="subBox2" id="TaskTracker101" onChange="update();"> TaskTracker</label></td>
+		<td><label><input type="checkbox" name="subBox3" id="RegionServer101" onChange="update();"> RegionServer</label></td>
+		<td><label><input type="checkbox" name="subBox4" id="Client101" onChange="update();"> Client</label></td>
+	</tr>
+	<tr>
+		<td id="cloud102">cloud102</td>
+		<td><label><input type="checkbox" name="subBox1" id="DataNode102" onChange="update();"> DataNode</label></td>
+		<td><label><input type="checkbox" name="subBox2" id="TaskTracker102" onChange="update();"> TaskTracker</label></td>
+		<td><label><input type="checkbox" name="subBox3" id="RegionServer102" onChange="update();"> RegionServer</label></td>
+		<td><label><input type="checkbox" name="subBox4" id="Client102" onChange="update();"> Client</label></td>
+	</tr>
+	<tr>
+		<td id="cloud103">cloud103</td>
+		<td><label><input type="checkbox" name="subBox1" id="DataNode103" onChange="update();"> DataNode</label></td>
+		<td><label><input type="checkbox" name="subBox2" id="TaskTracker103" onChange="update();"> TaskTracker</label></td>
+		<td><label><input type="checkbox" name="subBox3" id="RegionServer103" onChange="update();"> RegionServer</label></td>
+		<td><label><input type="checkbox" name="subBox4" id="Client103" onChange="update();"> Client</label></td>
+	</tr>
+	<tr>
+		<td id="cloud104">cloud104</td>
+		<td><label><input type="checkbox" name="subBox1" id="DataNode104" onChange="update();"> DataNode</label></td>
+		<td><label><input type="checkbox" name="subBox2" id="TaskTracker104" onChange="update();"> TaskTracker</label></td>
+		<td><label><input type="checkbox" name="subBox3" id="RegionServer104" onChange="update();"> RegionServer</label></td>
+		<td><label><input type="checkbox" name="subBox4" id="Client104" onChange="update();"> Client</label></td>
+	</tr>
+	<tr>
+		<td id="cloud105">cloud105</td>
+		<td><label><input type="checkbox" name="subBox1" id="DataNode105" onChange="update();"> DataNode</label></td>
+		<td><label><input type="checkbox" name="subBox2" id="TaskTracker105" onChange="update();"> TaskTracker</label></td>
+		<td><label><input type="checkbox" name="subBox3" id="RegionServer105" onChange="update();"> RegionServer</label></td>
+		<td><label><input type="checkbox" name="subBox4" id="Client105" onChange="update();"> Client</label></td>
+	</tr>
+	<tr>
+		<td id="cloud106">cloud106</td>
+		<td><label><input type="checkbox" name="subBox1" id="DataNode106" onChange="update();"> DataNode</label></td>
+		<td><label><input type="checkbox" name="subBox2" id="TaskTracker106" onChange="update();"> TaskTracker</label></td>
+		<td><label><input type="checkbox" name="subBox3" id="RegionServer106" onChange="update();"> RegionServer</label></td>
+		<td><label><input type="checkbox" name="subBox4" id="Client106" onChange="update();"> Client</label></td>
+	</tr>
+	<tr>
+		<td id="cloud107">cloud107</td>
+		<td><label><input type="checkbox" name="subBox1" id="DataNode107" onChange="update();"> DataNode</label></td>
+		<td><label><input type="checkbox" name="subBox2" id="TaskTracker107" onChange="update();"> TaskTracker</label></td>
+		<td><label><input type="checkbox" name="subBox3" id="RegionServer107" onChange="update();"> RegionServer</label></td>
+		<td><label><input type="checkbox" name="subBox4" id="Client107" onChange="update();"> Client</label></td>
+	</tr>
+	<tr>
+		<td id="cloud108">cloud108</td>
+		<td><label><input type="checkbox" name="subBox1" id="DataNode108" onChange="update();"> DataNode</label></td>
+		<td><label><input type="checkbox" name="subBox2" id="TaskTracker108" onChange="update();"> TaskTracker</label></td>
+		<td><label><input type="checkbox" name="subBox3" id="RegionServer108" onChange="update();"> RegionServer</label></td>
+		<td><label><input type="checkbox" name="subBox4" id="Client108" onChange="update();"> Client</label></td>
+	</tr>
+</table>
+
+								
+  			<br/><br/>
+    	<div style="float:left;">
+					<button type="button" class="btn btn-info btn-sm " onClick="javascript:history.go(-1);tt(this.style.display='none')">← Back</button>
+				</div>
+				<div  style="float:right;">
+					<button type="submit" class="btn btn-success btn-sm ">Next →</button>
+				</div>
+
+    <br/><br/>
+    </form>
+</div>
+<!--<div class="thumnail" style="width:750px; min-height:200px; margin:30px auto; border:1px solid rgb(221,221,221);"></div>-->
+
+<script>
+function onload()
+{
+				crossColor();
+				update();
+}
+
+function checkAll( name ){
+				var arrSon = document.getElementsByName(name);
+				for(i=0;i<arrSon.length;i++){
+								arrSon[i].checked = true;
+				}
+}
+
+function uncheckAll( name )
+{
+				var arrSon = document.getElementsByName(name);
+				for(i=0;i<arrSon.length;i++){
+								arrSon[i].checked = false;
+				}
+}
+
+function update() // 星号的显示与否
+{
+				var checkBoxName = ["DataNode", "TaskTracker", "RegionServer", "Client"];
+				var checkNum = 0;
+				for( var i = 0; i <= 8; i++ )
+				{
+								var str = "cloud10"+i;
+								var array = eval("checkBoxName");
+								checkNum = 0;
+								for( var j = 0; j < array.length; j++ )
+								{
+												if( document.getElementById( array[j] + "10" + i ).checked )
+																checkNum++;
+								}
+								if( checkNum == 0 )
+												document.getElementById( str ).innerHTML = str + "*";
+								else
+												document.getElementById( str ).innerHTML = str;
+				}
+}
+
+
+</script>
+
+<script>
+function crossColor()
+{
+					var tableCount = document.getElementsByTagName('table').length; // 整个HTML文件中的表格数量
+					for( var tableIndex = 0; tableIndex < tableCount; tableIndex++ ) // 下标是从0开始的
+					{
+									var table = document.getElementsByTagName('table')[tableIndex];
+									var rows = table.rows;
+									for( var i = 0; i < rows.length; i++ ) // 下标是从0开始的,[0]是表头
+									{
+													if( i % 2 == 1 )
+													{
+																	rows[i].bgColor = "#EEEEFF";
+													}
+									}
+					}
+}
+</script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</html>

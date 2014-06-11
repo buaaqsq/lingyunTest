@@ -1,0 +1,33 @@
+{% load staticfiles %}  
+<!DOCTYPE html>
+<html>
+<head>
+<title>第三步</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<!-- Bootstrap -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+<link href="{% static 'css/install.css' %}" rel="stylesheet" media="screen"></head>
+<body>
+<div id="Service" class="thumnail">
+ <form method="post" action="">
+ {% csrf_token %} 
+ <h4><strong>选择高可用性</strong></h4>
+	 
+  	<div class="field">        
+        <label for="input1" class="col-md-4 control-label"  style="float:left;">&nbsp;选择hadoop安装模式</label>
+        <p>&nbsp;
+         {% if form.ha.errors %}
+         <div class="alert alert-error">
+             {{ form.ha.errors }}
+         </div>
+         {% endif %}
+         {{ form.ha }}
+         </p>
+     </div>
+  <div  style="float:left; margin-left:400px;">
+  <button type="submit" class="btn btn-success" >下一步</button>
+  </div>
+  </form>
+</div>
+</body>
+</html>

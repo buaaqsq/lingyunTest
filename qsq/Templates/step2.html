@@ -1,0 +1,38 @@
+{%extends "newbase.html" %}
+{% load staticfiles %}  
+{% block title %}第二步{% endblock %}
+{% block content %} 
+<div id="Service" class="thumnail">
+ <form method="post" action="">
+ {% csrf_token %} 
+ <h4><strong>设置JDK</strong></h4>
+	 <div class="field">        
+        <label for="input1" class="col-md-4 control-label"  style="float:left;">&nbsp;JDK路径</label>
+         {% if form.java_home.errors %}
+         <div class="alert alert-error">
+             {{ form.java_home.errors }}
+         </div>
+         {% endif %}
+         {{ form.java_home }}
+     </div>
+  	<p>&nbsp;<label>
+      	<input type="checkbox" value="True"  name="autoInstall">自动安装
+    	</label>
+    </p>
+  	<div class="field">        
+        <label for="input1" class="col-md-4 control-label"  style="float:left;">&nbsp;选择服务</label>
+        <p>&nbsp;
+         {% if form.compenent.errors %}
+         <div class="alert alert-error">
+             {{ form.compenent.errors }}
+         </div>
+         {% endif %}
+         {{ form.compenent }}
+         </p>
+     </div>
+  <div  style="float:left; margin-left:500px;">
+  <button type="submit" class="btn btn-success" >下一步</button>
+  </div>
+  </form>
+</div>
+{% endblock %}

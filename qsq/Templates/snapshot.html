@@ -1,0 +1,92 @@
+﻿{%extends "newbase.html" %}
+{% load staticfiles %}  
+{% block title %}第一步{% endblock %} 
+{% block extra_head %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+{% endblock %}
+
+ {% block content %}
+<div class="thumnail" style="width:100%; min-height:300px; margin:20px auto; border:1px solid rgb(221,221,221);">
+<h3 style="margin:10px;"><strong>快照管理</strong></h3> 
+         <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="choose1" class="col-md-3 control-label" style="text-align:left;float:left;">文件路径 :</label>
+        <div class="col-sm-5">
+           <select class="form-control" id="choose1">
+        <option>/tmp</option>
+        <option>/user</option>
+        <option>/hbase</option>
+        <option>/benchmarks</option>
+      </select>
+        </div>
+      </div>
+     <div class="form-group">
+        <label for="choose2"  class="col-md-3 control-label" style="text-align:left;float:left;">快照文件名 :</label>
+        <div class="col-sm-5">
+        <input type="text" class="form-control" placeholder="">
+        </div>
+      </div>
+     <div class="form-group"></div>
+      <div style="margin:0px 0px 0px 180px;">
+      <button type="submit" class="btn btn-success" >恢复快照</button>
+      </div>
+    </form>
+</div>
+
+<div class="thumnail" style="width:100%; min-height:300px; margin:20px auto; border:1px solid rgb(221,221,221);">
+<h3 style="margin:10px;"><strong>快照恢复</strong></h3> 
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="choose1" class="col-md-3 control-label" style="text-align:left;float:left;">文件路径 :</label>
+        <div class="col-sm-5">
+           <select class="form-control" id="choose1">
+        <option>/tmp</option>
+        <option>/user</option>
+        <option>/hbase</option>
+        <option>/benchmarks</option>
+      </select>
+        </div>
+      </div>
+     <div class="form-group">
+        <label for="choose2"  class="col-md-3 control-label" style="text-align:left;float:left;">快照文件名 :</label>
+        <div class="col-sm-5">
+        <input type="text" class="form-control" placeholder="">
+        </div>
+      </div>
+     <div class="form-group"></div>
+      <div style="margin:0px 0px 0px 180px;">
+      <button type="submit" class="btn btn-success" >恢复快照</button>
+      </div>
+    </form>
+</div>
+
+
+<div class="thumnail" style="width:100%; min-height:300px; margin:20px auto; border:1px solid rgb(221,221,221);">
+<h3 style="margin:10px;"><strong>快照删除</strong></h3> 
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="choose1" class="col-md-3 control-label" style="text-align:left;float:left;">文件路径 :</label>
+        <div class="col-sm-5">
+           <select class="form-control" id="choose1">
+        <option>/tmp</option>
+        <option>/user</option>
+        <option>/hbase</option>
+        <option>/benchmarks</option>
+      </select>
+        </div>
+      </div>
+     <div class="form-group">
+        <label for="choose2"  class="col-md-3 control-label" style="text-align:left;float:left;">快照文件名 :</label>
+        <div class="col-sm-5">
+         <input type="text" class="form-control" placeholder="">
+        </div>
+      </div>
+     <div class="form-group"></div>
+      <div style="margin:0px 0px 0px 180px;">
+      <button type="submit" class="btn btn-success" >删除快照</button>
+      </div>
+    </form>
+</div>
+</body>
+{% endblock %}

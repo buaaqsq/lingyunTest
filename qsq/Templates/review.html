@@ -1,0 +1,71 @@
+{%extends "newbase.html" %} {% load staticfiles %} {% block title %}总结
+{%endblock %} {% block extra_head %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+{% endblock %} {% block content %}
+<div id="Install" class="thumnail">
+	<h3 style="margin: 10px;">
+		<strong>检查</strong>
+	</h3>
+	<div class="well well-sm"
+		style="background-color: rgb(230, 241, 245); width: 100%;">请在安装前检查配置</div>
+
+	<div class="well well-sm"
+		style="background-color: rgb(230, 241, 245); width: 100%;">
+		<div align="right" style="margin-right: 20px">
+			<button type="button" class="btn btn-info btn-sm "
+				onClick="preview(1)">打印</button>
+		</div>
+		<br />
+		<!--startprint1-->
+		<ul>
+			<li>管理账号：admin</li>
+			<li>集群名称：{{info.name}}</li>
+			<li>总服务器数：{{info.hostnum}}</li>
+			<li>本地存储库：No</li>
+			<li>服务
+				<ul>
+					{% for ser in services %}
+					<li><ul>
+							<li><a href="#">{{ser}}</a>：{{ser.value}}</li>
+						</ul> <!--  --></li> {% endfor %}
+
+				</ul>
+			</li>
+
+		</ul>
+		<!--endprint1-->
+	</div>
+
+	<div style="float: left;">
+		<button type="button" class="btn btn-info btn-sm "
+			onClick="javascript:history.go(-1);tt(this.style.display='none')">←
+			返回</button>
+	</div>
+	<div style="float: right;">
+		<button type="submit" class="btn btn-success btn-sm ">部署 →</button>
+	</div>
+
+	<br />
+	<br />
+</div>
+<script>
+function preview(oper)         
+{  
+		if (oper < 10)  
+		{  
+				bdhtml=window.document.body.innerHTML;//获取当前页的html代码  
+				sprnstr="<!--startprint"+oper+"-->";//设置打印开始区域  
+				eprnstr="<!--endprint"+oper+"-->";//设置打印结束区域  
+				prnhtml=bdhtml.substring(bdhtml.indexOf(sprnstr)+18); //从开始代码向后取html  
+						
+				prnhtmlprnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));//从结束代码向前取html  
+				window.document.body.innerHTML=prnhtml;  
+				window.print();  
+				window.document.body.innerHTML=bdhtml;  
+				} else {  
+				window.print();  
+		}  
+}  
+</script>
+{% endblock %}

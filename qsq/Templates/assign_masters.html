@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assign Masters</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<style type="text/css">
+form{
+	margin:10px;
+		}
+.thumnail{
+	min-height:700px;
+	display:block;
+	padding:10px;
+	width:800px;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+	}	
+.STYLE1 {color: #FFFFFF}
+</style>
+</head>
+<body style="width:80%; margin-left:10%;" onLoad="onload()">
+<div class="thumnail" style="width:100%; min-height:300px; margin:20px auto; border:1px solid rgb(221,221,221);">
+<h3 style="margin:10px;"><strong>Assign Masters</strong></h3> 
+<div class="well well-sm" style="background-color: rgb(230,241,245);width:100%;">Assign master components to hosts you want to run them on</br>
+Hiveserver2,Hive Metastore,and WebHCat Server will be co-hosted on the same server.</div>
+    <form class="form-horizontal" role="form" action="2.html">
+    				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+												<td width="45%"><table width="100%" border="0" cellspacing="1" cellpadding="10">
+																<tr>
+																				<td><label for="NameNode">
+																					<div align="right">NameNode:</div>
+																				</label></td>
+																				<td>
+																								<select class="form-control" id="NameNode" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+																<tr>
+																				<td><label for="SNameNode">
+																					<div align="right">SNameNode:</div>
+																					</label></td>
+																				<td>
+																								<select class="form-control" id="SNameNode" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+																<tr>
+																				<td><label for="JobTracker">
+																					<div align="right">JobTracker:</div>
+																					</label></td>
+																				<td>
+																								<select class="form-control" id="JobTracker" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+																<tr>
+																				<td><label for="NagiosServer">
+																					<div align="right">Nagios Server :</div>
+																					</label></td>
+																				<td>
+																								<select class="form-control" id="NagiosServer" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+																<tr>
+																				<td><label for="GangliaCollector">
+																					<div align="right">Ganglia Collector :</div>
+																					</label></td>
+																				<td>
+																								<select class="form-control" id="GangliaCollector" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+																<tr>
+																				<td><label for="HiveServer2">
+																					<div align="right">HiveServer2:</div>
+																					</label></td>
+																				<td>
+																								<select class="form-control" id="HiveServer2" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+																<tr>
+																				<td><label for="HiveMetastore">
+																					<div align="right">Hive Metastore :</div>
+																					</label></td>
+																				<td>
+																								cloud102*																				</td>
+																</tr>
+																<tr>
+																				<td><label for="WebHCatServer">
+																					<div align="right">WebHCat Server :</div>
+																					</label></td>
+																				<td>cloud102*</td>
+																</tr>
+																<tr>
+																				<td><label for="HBaseMaster">
+																					<div align="right">HBase Master :</div>
+																					</label></td>
+																				<td>
+																								<select class="form-control" id="HBaseMaster" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+																<tr>
+																				<td><label for="ZooKeeper1">
+																					<div align="right">ZooKeeper:</div>
+																					</label></td>
+																				<td>
+																								<select class="form-control" id="ZooKeeper1" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+																<tr>
+																				<td><label for="ZooKeeper2">
+																					<div align="right">ZooKeeper:</div>
+																				</label></td>
+																				<td>
+																								<select class="form-control" id="ZooKeeper2" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+																<tr>
+																				<td><label for="ZooKeeper3">
+																					<div align="right">ZooKeeper:</div>
+																				</label></td>
+																				<td>
+																								<select class="form-control" id="ZooKeeper3" onChange="update()">
+																								<option value="0">cloud100(3.6GB, 1 cores)</option>
+																								<option value="1">cloud101(3.6GB, 1 cores)</option>
+																								<option value="2">cloud102(3.6GB, 1 cores)</option>
+																								<option value="3">cloud103(3.6GB, 1 cores)</option>
+																								<option value="4">cloud104(3.6GB, 1 cores)</option>
+																								<option value="5">cloud105(3.6GB, 1 cores)</option>
+																								<option value="6">cloud106(3.6GB, 1 cores)</option>
+																								<option value="7">cloud107(3.6GB, 1 cores)</option>
+																								<option value="8">cloud108(3.6GB, 1 cores)</option>
+																								</select>																				</td>
+																</tr>
+									</table></td>
+									
+												<td width="10%"><table width="100%" border="0" cellspacing="1" cellpadding="0"></table></td>
+												<td width="45%"><table width="100%" height="559" border="0" cellpadding="0" cellspacing="1">
+													<tr>
+														<td align="center"><div class="well well-sm" style="background-color:#CCFFFF;width:90%;" align="left" id="cloud100">
+														</div></td>
+													</tr>
+													<tr>
+														<td align="center"><div class="well well-sm" style="background-color:#CCFFFF;width:90%;" align="left" id="cloud101">
+													</div></td>
+													</tr>
+													<tr>
+														<td align="center"><div class="well well-sm" style="background-color:#CCFFFF;width:90%;" align="left" id="cloud102">
+														</div></td>
+													</tr>
+													<tr>
+														<td align="center"><div class="well well-sm" style="background-color:#CCFFFF;width:90%;" align="left" id="cloud103">
+														</div></td>
+													</tr>
+													<tr>
+														<td align="center"><div class="well well-sm" style="background-color:#CCFFFF;width:90%;" align="left" id="cloud104">
+														</div></td>
+													</tr>
+													<tr>
+														<td align="center"><div class="well well-sm" style="background-color:#CCFFFF;width:90%;" align="left" id="cloud105">
+														</div></td>
+													</tr>
+													<tr>
+														<td align="center"><div class="well well-sm" style="background-color:#CCFFFF;width:90%;" align="left" id="cloud106">
+														</div></td>
+													</tr>
+													<tr>
+														<td align="center"><div class="well well-sm" style="background-color:#CCFFFF;width:90%;" align="left" id="cloud107">
+														</div></td>
+													</tr>
+													<tr>
+														<td align="center"><div class="well well-sm" style="background-color:#CCFFFF;width:90%;" align="left" id="cloud108">
+														</div></td>
+													</tr>
+												</table></td>
+								</tr>
+				</table>
+				<br/>
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="45%">&nbsp;</td>
+										<td width="10%">&nbsp;</td>
+										<td width="45%" align="center"><div class="well well-sm" style="background-color:#FFFFCC;width:90%; color:#5EBD48" align="left" id="HostUse">
+										</div></td>
+									</tr>
+								</table>
+								
+  			<br/><br/>
+    	<div style="float:left;">
+					<button type="button" class="btn btn-info btn-sm " onClick="javascript:history.go(-1);tt(this.style.display='none')">← Back</button>
+				</div>
+				<div  style="float:right;">
+					<button type="submit" class="btn btn-success btn-sm ">Next →</button>
+				</div>
+
+    <br/><br/>
+    </form>
+</div>
+<!--<div class="thumnail" style="width:750px; min-height:200px; margin:30px auto; border:1px solid rgb(221,221,221);"></div>-->
+
+<script>
+
+				var cloud100Str = "", count100 = 0;
+				var cloud101Str = "", count101 = 0;
+				var cloud102Str = "", count102 = 0;
+				var cloud103Str = "", count103 = 0;
+				var cloud104Str = "", count104 = 0;
+				var cloud105Str = "", count105 = 0;
+				var cloud106Str = "", count106 = 0;
+				var cloud107Str = "", count107 = 0;
+				var cloud108Str = "", count108 = 0;
+				var useHostNum = 0; // 使用的host数
+				var unuseHostNum = 0; // 使用的host数
+
+function onload()
+{
+				init();
+				update();
+}
+
+function init()
+{
+				document.getElementById("NameNode").value = "0";
+				document.getElementById("SNameNode").value = "0";
+				document.getElementById("JobTracker").value = "0";
+				document.getElementById("NagiosServer").value = "8";
+				document.getElementById("GangliaCollector").value = "8";
+				document.getElementById("HiveServer2").value = "2";
+				document.getElementById("HBaseMaster").value = "1";
+				document.getElementById("ZooKeeper1").value = "5";
+				document.getElementById("ZooKeeper2").value = "6";
+				document.getElementById("ZooKeeper3").value = "7";
+}
+				
+function normStyle( style, count ) // 规范显示格式
+{
+				if( count > 0 && count % 3 == 0 )
+				{
+								style += "<br/><br/>";
+				}
+				return style;
+}
+
+function updateById( id, style )
+{
+				switch( document.getElementById(id).value )
+				{
+								case "0":
+												cloud100Str = normStyle( cloud100Str, count100 );
+												cloud100Str += style;
+												count100++;
+												break;
+								case "1":
+												cloud101Str = normStyle( cloud101Str, count101 );
+												cloud101Str += style;
+												count101++;
+												break;
+								case "2":
+												cloud102Str = normStyle( cloud102Str, count102 );
+												cloud102Str += style;
+												count102++;
+												break;
+								case "3":
+												cloud103Str = normStyle( cloud103Str, count103 );
+												cloud103Str += style;
+												count103++;
+												break;
+								case "4":
+												cloud104Str = normStyle( cloud104Str, count104 );
+												cloud104Str += style;
+												count104++;
+												break;
+								case "5":
+												cloud105Str = normStyle( cloud105Str, count105 );
+												cloud105Str += style;
+												count105++;
+												break;
+								case "6":
+												cloud106Str = normStyle( cloud106Str, count106 );
+												cloud106Str += style;
+												count106++;
+												break;
+								case "7":
+												cloud107Str = normStyle( cloud107Str, count107 );
+												cloud107Str += style;
+												count107++;
+												break;
+								case "8":
+												cloud108Str = normStyle( cloud108Str, count108 );
+												cloud108Str += style;
+												count108++;
+												break;	
+				}
+}
+
+function update()
+{
+				cloud100Str = "", count100 = 0;
+				cloud101Str = "", count101 = 0;
+				cloud102Str = "", count102 = 0;
+				cloud103Str = "", count103 = 0;
+				cloud104Str = "", count104 = 0;
+				cloud105Str = "", count105 = 0;
+				cloud106Str = "", count106 = 0;
+				cloud107Str = "", count107 = 0;
+				cloud108Str = "", count108 = 0;
+				unuseHostNum = 0;
+				useHostNum = 0;
+				var style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">NameNode</a> ";
+				updateById( "NameNode", style );
+				
+				style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">SNameNode</a>";
+				updateById( "SNameNode", style );
+				
+				style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">JobTracker</a>";
+				updateById( "JobTracker", style );
+				
+				style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">Nagios Server</a>";
+				updateById( "NagiosServer", style );
+				
+				style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">Ganglia Collector</a>";
+				updateById( "GangliaCollector", style );
+				
+				style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">HiveServer2</a>";
+				updateById( "HiveServer2", style );
+				
+				style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">HBase Master</a>";
+				updateById( "HBaseMaster", style );
+				
+				style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">ZooKeeper</a>";
+				updateById( "ZooKeeper1", style );
+				
+				style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">ZooKeeper</a>";
+				updateById( "ZooKeeper2", style );
+				
+				style = "<a class=\"well well-sm STYLE1\" style=\"background-color:#5ebd48;width:100px;\" align=\"left\">ZooKeeper</a>";
+				updateById( "ZooKeeper3", style );
+
+				document.getElementById("cloud100").innerHTML = "<p><strong>cloud100(3.6GB, 1 cores)</strong></p>" +
+														"<div align=\"left\">" + cloud100Str + "</div>";
+				document.getElementById("cloud101").innerHTML = "<p><strong>cloud101(3.6GB, 1 cores)</strong></p>" +
+														"<div align=\"left\">" + cloud101Str + "</div>";
+				document.getElementById("cloud102").innerHTML = "<p><strong>cloud102(3.6GB, 1 cores)</strong></p>" +
+														"<div align=\"left\">" + cloud102Str + "</div>";
+				document.getElementById("cloud103").innerHTML = "<p><strong>cloud103(3.6GB, 1 cores)</strong></p>" +
+														"<div align=\"left\">" + cloud103Str + "</div>";
+				document.getElementById("cloud104").innerHTML = "<p><strong>cloud104(3.6GB, 1 cores)</strong></p>" +
+														"<div align=\"left\">" + cloud104Str + "</div>";
+				document.getElementById("cloud105").innerHTML = "<p><strong>cloud105(3.6GB, 1 cores)</strong></p>" +
+														"<div align=\"left\">" + cloud105Str + "</div>";
+				document.getElementById("cloud106").innerHTML = "<p><strong>cloud106(3.6GB, 1 cores)</strong></p>" +
+														"<div align=\"left\">" + cloud106Str + "</div>";
+				document.getElementById("cloud107").innerHTML = "<p><strong>cloud107(3.6GB, 1 cores)</strong></p>" +
+														"<div align=\"left\">" + cloud107Str + "</div>";
+				document.getElementById("cloud108").innerHTML = "<p><strong>cloud108(3.6GB, 1 cores)</strong></p>" +
+														"<div align=\"left\">" + cloud108Str + "</div>";
+				for( var i = 0; i <= 8; i++ )
+				{
+								var a = eval("count10"+i);
+								if( a == 0 )
+												unuseHostNum++;
+								else
+												useHostNum++;
+				}
+				if( unuseHostNum > 0 )
+								document.getElementById("HostUse").innerHTML = "<br/><p><strong>" + unuseHostNum + " hosts not running master services</strong></p>";
+				else
+								document.getElementById("HostUse").innerHTML = "<br/><p><strong> All hosts is running master services</strong></p>";
+}
+</script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,15 @@
+[2014-05-24 07:34:11,769] INFO qsq : rm -rf /root/.ssh/*
+[2014-05-24 07:34:12,019] INFO qsq : ./get_ssh_keygen.exp
+[2014-05-24 07:34:12,025] INFO qsq : cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+[2014-05-24 07:34:12,046] INFO qsq : ssh-add /root/.ssh/id_rsa
+[2014-05-24 07:34:12,046] ERROR qsq : Identity added: /root/.ssh/id_rsa (/root/.ssh/id_rsa)
+
+[2014-05-24 08:39:54,169] INFO qsq : mv /root/workspace/lingyun/qsq/shell/core-site.xml /root/workspace/lingyun/qsq/shell/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 08:39:54,176] INFO qsq : mv /root/workspace/lingyun/qsq/shell/hdfs-site.xml /root/workspace/lingyun/qsq/shell/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 08:39:54,182] INFO qsq : mv /root/workspace/lingyun/qsq/shell/yarn-site.xml /root/workspace/lingyun/qsq/shell/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 08:39:54,189] INFO qsq : mv /root/workspace/lingyun/qsq/shell/mapred-site.xml /root/workspace/lingyun/qsq/shell/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 08:39:54,196] INFO qsq : mv /root/workspace/lingyun/qsq/shell/slaves /root/workspace/lingyun/qsq/shell/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 08:39:54,211] INFO qsq : mv /root/workspace/lingyun/qsq/shell/hadoop-env.sh /root/workspace/lingyun/qsq/shell/hadoop-2.2.0/etc/hadoop/
+[2014-05-24 08:39:54,233] INFO qsq : mv /root/workspace/lingyun/qsq/shell/hadoop-2.2.0 /usr/opt/
+[2014-05-24 08:39:54,233] ERROR qsq : mv: cannot move `/root/workspace/lingyun/qsq/shell/hadoop-2.2.0' to `/usr/opt/hadoop-2.2.0': Directory not empty
+

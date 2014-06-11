@@ -1,0 +1,161 @@
+{%extends "newbase.html" %} {% load staticfiles %} 
+{% block title%}Assign Masters{% endblock %} {% block extra_head %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+{% endblock %}
+<style type="text/css">
+form {
+	margin: 10px;
+}
+
+.thumnail {
+	min-height: 700px;
+	display: block;
+	padding: 10px;
+	width: 800px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.STYLE1 {
+	color: #FFFFFF
+}
+</style>
+{% block content %}
+<div class="thumnail"
+	style="width: 100%; min-height: 300px; margin: 20px auto; border: 1px solid rgb(221, 221, 221);">
+	<h3 style="margin: 10px;">
+		<strong>安排slave </strong>
+	</h3>
+	<div class="well well-sm"
+		style="background-color: rgb(230, 241, 245); width: 100%;">
+		Assign slave and client components to hosts you want to run them on.</br>
+		Host that are assigned master components are shown with *.<br />
+		"Clients" will install HDFS Client, MapReduce Client, Hive Client,
+		HCat Client, HBase Client and ZooKeeper Client.
+	</div>
+	<form method="post" action="">
+		{% csrf_token %}
+		<table width="100%" border="0" cellspacing="0" cellpadding="8">
+			<tr>
+				<th width="13%" scope="col">主机</th>
+				<th width="21%" scope="col"><label
+					onClick="checkAll('DataNode');update();">全选</label>&nbsp;|&nbsp;<label
+					onClick="uncheckAll('DataNode');update();">全不选</label></th>
+				<th width="24%" scope="col"><label
+					onClick="checkAll('Nodemanager');update();">全选</label>&nbsp;|&nbsp;<label
+					onClick="uncheckAll('Nodemanager');update();">全不选</label></th>
+				<th width="26%" scope="col"><label
+					onClick="checkAll('RegionServer');update();">全选</label>&nbsp;|&nbsp;<label
+					onClick="uncheckAll('RegionServer');update();">全不选</label></th>
+				<th width="16%" scope="col"><label
+					onClick="checkAll('worker');update();">全选</label>&nbsp;|&nbsp;<label
+					onClick="uncheckAll('worker');update();">全不选</label></th>
+			</tr>
+
+			{% for host in hosts %}
+			<tr>
+				<td id="{{host}}">{{host}}</td>
+				<td><label><input type="checkbox" value="{{host}}"
+						name="DataNode" id="DataNode_{{host}}" onChange="update();">
+						DataNode</label></td>
+				<td><label><input type="checkbox" value="{{host}}"
+						name="Nodemanager" id="TaskTracker_{{host}}" onChange="update();">
+						Nodemanager</label></td>
+				<td><label><input type="checkbox" value="{{host}}"
+						name="RegionServer" id="RegionServer_{{host}}"
+						onChange="update();"> RegionServer</label></td>
+				<td><label><input type="checkbox" value="{{host}}"
+						name="worker" id="Worker_{{host}}" onChange="update();">
+						worker</label></td>
+			</tr>
+			{% endfor %}
+		</table>
+
+
+		<br />
+		<br />
+		<div style="float: left;">
+			<button type="button" class="btn btn-info btn-sm "
+				onClick="javascript:history.go(-1);tt(this.style.display='none')">←
+				返回</button>
+		</div>
+		<div style="float: right;">
+			<button type="submit" class="btn btn-success btn-sm ">下一步 →</button>
+		</div>
+
+		<br />
+		<br />
+	</form>
+</div>
+<!--<div class="thumnail" style="width:750px; min-height:200px; margin:30px auto; border:1px solid rgb(221,221,221);"></div>-->
+
+<script>
+function onload()
+{
+				crossColor();
+				update();
+}
+
+function checkAll( name ){
+				var arrSon = document.getElementsByName(name);
+				for(i=0;i<arrSon.length;i++){
+								arrSon[i].checked = true;
+				}
+}
+
+function uncheckAll( name )
+{
+				var arrSon = document.getElementsByName(name);
+				for(i=0;i<arrSon.length;i++){
+								arrSon[i].checked = false;
+				}
+}
+
+var hostlist = new Array();　
+{% for host in hosts %}
+   hostlist.push("{{host}}");
+{%endfor%}
+
+function update() // 星号的显示与否
+{
+				var checkBoxName = ["DataNode", "TaskTracker", "RegionServer", "Worker"];				
+				var checkNum = 0;
+				for( var i = 0; i <= 8; i++ )
+				{
+								var str = hostlist[i];
+								var array = eval("checkBoxName");
+								checkNum = 0;
+								for( var j = 0; j < array.length; j++ )
+								{
+												if( document.getElementById( array[j] + "_" + hostlist[i]).checked )
+																checkNum++;
+								}
+								if( checkNum == 0 )
+												document.getElementById( str ).innerHTML = str + "*";
+								else
+												document.getElementById( str ).innerHTML = str;
+				}
+}
+
+
+</script>
+
+<script>
+function crossColor()
+{
+					var tableCount = document.getElementsByTagName('table').length; // 整个HTML文件中的表格数量
+					for( var tableIndex = 0; tableIndex < tableCount; tableIndex++ ) // 下标是从0开始的
+					{
+									var table = document.getElementsByTagName('table')[tableIndex];
+									var rows = table.rows;
+									for( var i = 0; i < rows.length; i++ ) // 下标是从0开始的,[0]是表头
+									{
+													if( i % 2 == 1 )
+													{
+																	rows[i].bgColor = "#EEEEFF";
+													}
+									}
+					}
+}
+</script>
+{% endblock %}
